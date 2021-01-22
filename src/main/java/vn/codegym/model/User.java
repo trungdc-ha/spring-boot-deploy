@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@Table(name = "Account")
 public class User {
     @Id
     @GeneratedValue
