@@ -37,10 +37,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/student")
                 .permitAll()
                 .and()
-                .authorizeRequests().antMatchers("/hello","/student/create","/student").permitAll()
-//                .antMatchers("/student/create").hasRole("ADMIN")
-////                    .antMatchers("/student/create").access()
-//                .antMatchers("/student/edit").hasAnyRole("ADMIN", "USER")
+                .authorizeRequests().antMatchers("/hello", "/student/create", "/student").permitAll()
+//.antMatchers("/student/create").hasRole("ADMIN")
+//.antMatchers("/student/create").access()
+//.antMatchers("/student/edit").hasAnyRole("ADMIN", "USER")
                 .anyRequest().authenticated();
 
         // Cấu hình Remember Me . Ở form login bước 3, ta có 1 nút remember me. Nếu người dùng tick vào đó ta sẽ dung cookie lưu lại trong 24h
