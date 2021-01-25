@@ -31,7 +31,7 @@ public class StudentController {
     public String showCreateForm(Model model) {
         model.addAttribute("student", new Student());
 
-        return "/student/create";
+        return "student/create";
     }
 
     @PostMapping(value = "/create")
@@ -45,7 +45,7 @@ public class StudentController {
     @GetMapping(value = "/edit/{id}")
     public String showEditPage(@PathVariable int id, Model model){
         model.addAttribute("student", studentService.findById(id));
-        return "/student/edit";
+        return "student/edit";
     }
 
     @PostMapping(value = "/edit")
