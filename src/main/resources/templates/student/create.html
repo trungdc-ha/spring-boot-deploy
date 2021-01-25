@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{/student/layout::head}">
+<head th:replace="~{student/layout::head}">
 
 </head>
 <h1 >Create Page</h1>
 <body>
-<form action="/student/create" method="post" th:object="${student}">
+<form action="student/create" method="post" th:object="${student}">
     <div>
         <label>Name:</label>
         <input type="text"  th:field="*{name}"/>
